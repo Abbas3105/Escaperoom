@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escape Room</title>
+    <link rel="stylesheet" href="abbas.css" />
+    <script src="abbas.js"></script>
+  </head>
+
+  <body>
+    <div id="cont">
+      <!-- Torsdag: Jobbet med siste side og gjorde det meste ferdig med css delen.-->
+      <!-- Fredag: fikset på små ting og la til flere kommentarer.-->
+      <div id="top">
+        <p>
+          <span>VIKTIG !! <br /><br /></span>
+          PLUKK OPP PINNEN OG PUTT DEN I POSEN FØR POLITIET TAR DEG !!
+        </p>
+      </div>
+
+      
+
+      <div id="mid">
+        <img src="bilder/politimann.png" alt="" />
+      </div>
+
+     
+
+      <div class="pinne">
+        <div
+          id="div1"
+          ondrop="dropHandler(event)"
+          ondragover="dragoverHandler(event)"
+        >
+          <img
+            id="img1"
+            src="bilder/pinne.png"
+            draggable="true"
+            ondragstart="dragstartHandler(event)"
+            width="170"
+          />
+        </div>
+
+        <div
+          id="div2"
+          ondrop="dropHandler(event)"
+          ondragover="dragoverHandler(event)"
+        >
+        <!-- <img
+            id="img1"
+            src="bilder/pose.png"
+
+            width="400"
+          /> -->
+      </div>
+      </div>
+
+      <div id="ned">
+
+        <p id="message" style="font-size: 45px;"></p>
+        <button id="btn" onclick="tilbake()">Tilbake</button>
+      </div>
+    </div>
+  </body>
+</html>
