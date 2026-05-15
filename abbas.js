@@ -60,11 +60,25 @@ function dropHandler(ev) {
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 
-   message.innerText = "Du vant !!";
+  message.innerText = "Du vant !!";
+  clearInterval(timeoutId);
 
 
-  
+
+  // To cancel it before it runs:
+
+
 }
+let x = 10;
+
+const timeoutId = setInterval(() => {
+  document.getElementById("tid").innerHTML = x;
+  x--;
+  if (x < 0) {
+    clearInterval(timeoutId);
+    document.getElementById("tid").innerHTML = "du har ikke mer tid. prøv igjen.";}
+  }, 1000);
+
 
 /* ------------------------------------- Tilbake side (Funksjon) ------------------------------------ */
 
